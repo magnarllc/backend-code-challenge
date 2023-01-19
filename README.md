@@ -3,8 +3,8 @@
 ## Preamble 
 
 Thank you for interviewing with Magnar. The goal of this code challenge is to
-assess basic competency in backend engineering fundamentals and developmental
-best practices.
+assess competency in backend engineering fundamentals and developmental best
+practices.
 
 We understand that this challenge is part of a job interview being done on the
 candidate's own time and we aim to be respectful of that. Plan to spend about
@@ -32,7 +32,8 @@ write a simple application to assist in performing this check.
 Write a sever application that can be used to check if a particular card's ID
 number is present on the CCL. The program should meet the following requirements:
 
-* Run on Node.js 18.x (current LTS) and be written using express.js 
+* Run on Node.js current LTS release (18.x at the time of this writing) and be
+  written using express.js
 
 * Serve the application directly on port 8080. Plain HTTP is fine (no HTTPS is
   needed), and no load balancer or proxy is necessary (e.g. nginx).
@@ -51,9 +52,8 @@ number is present on the CCL. The program should meet the following requirements
   error status indicating that the data is too old to make a determination about
   the requested ID.
 
-* Include instructions for how to run your application. A CLI driven build
-  procedure is preferred and your application should not be dependant on any
-  IDE.
+* Include instructions for how to run your application. A CLI driven
+  procedure is preferred. Your application should not be dependant on any IDE.
 
 * Other than those explicitly specified here, the application may be written
   using whatever tools/libraries you feel most comfortable working in.
@@ -71,7 +71,10 @@ number is present on the CCL. The program should meet the following requirements
 ### http://{server}/vccl
 
 #### PUT
-Provide a copy of the VCCL to the service
+Provide a copy of the VCCL to the service. This may be used on service startup
+to feed the initial VCCL into the system, or later during runtime to provide an
+updated list. If a new list is provided, the old list should be flushed from the
+system and replaced by the new one.
 
 Example:
 
@@ -172,5 +175,9 @@ about what that phrase means to you.
   feature/check/test/etc. that you would have liked to include if time was
   not a factor, clearly communicating _what you would have done_ is almost as
   good as having actually done it.
+
+* The provided solution will be evaluated by humans, so deviations from the
+  specification will not result in automatic penalties. However, if you do need
+  to deviate from the spec, please be sure to explain your reasoning for doing so.
 
 Good Luck!
