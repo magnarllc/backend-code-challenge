@@ -2,20 +2,21 @@
 
 ## Preamble 
 
-* Thank you for interviewing with Magnar. The goal of this code challenge is to
-  assess basic competency in backend engineering fundamentals and developmental
-  best practices.
+Thank you for interviewing with Magnar. The goal of this code challenge is to
+assess basic competency in backend engineering fundamentals and developmental
+best practices.
 
-* We understand that this challenge is part of a job interview being done on the
-  candidate's own time and we aim to be respectful of that. Plan to spend about
-  1-2hrs on the task. If you find that the challenge is taking much beyond this amount
-  of time, please stop writing code and refocus on communicating your intent
-  through comments or other documentation. It is more important that we
-  understand what you are trying to accomplish and how you would get there than
-  for you to deliver a flawlessly working technical artifact.
+We understand that this challenge is part of a job interview being done on the
+candidate's own time and we aim to be respectful of that. Plan to spend about
+1-2hrs on the task. If you find that the challenge is taking much beyond this
+amount of time, please stop writing code and refocus on communicating your
+intent through comments or other documentation. It is more important that we
+understand what you are trying to accomplish and how you would get there than
+for you to deliver a flawlessly working technical artifact.
 
-* If you have any questions concerning the challenge description or requirements,
-  please don't hesitate to send an email to Bob Sherbert <bob@magnar.recruitee.com>.
+If you have any questions concerning the challenge description or requirements,
+please don't hesitate to send an email to Bob Sherbert
+<bob@magnar.recruitee.com>.
 
 ## Description of Task
 
@@ -69,7 +70,8 @@ number is present on the CCL. The program should meet the following requirements
 
 ### http://{server}/vccl
 
-PUT - used to provide a copy of the VCCL to the service
+#### PUT
+Provide a copy of the VCCL to the service
 
 Example:
 
@@ -94,8 +96,9 @@ Error Response (200):
 
 ### http://{server}/vccl/:id
 
-GET - Query whether the provided ID number is on the CCL, and by extension, whether
-or not it has been canceled.
+#### GET
+Query whether the provided ID number is on the CCL, and by extension, whether or
+not it has been canceled.
 
 If the value provided is present on the VCCL, the service should report to the
 user that the value is a "canceled" ID. If the value is _not_ present in the
