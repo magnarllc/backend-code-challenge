@@ -73,21 +73,24 @@ PUT - used to provide a copy of the VCCL to the service
 
 Example:
 
-  curl http://{server}/vccl --upload-file {path-to-vccl.csv}
+    curl http://{server}/vccl --upload-file {path-to-vccl.csv}
 
 Success Response (200):
  
-  { 
-    "status": "success"
-  }
+```json
+{
+  "status": "success"
+}
+```
 
 Error Response (200):
 
-  { 
-    "status": "error",
-    "msg": "<descriptive error message>"
-  }
-
+```json
+{
+  "status": "error",
+  "msg": "<descriptive error message>"
+}
+```
 
 ### http://{server}/vccl/:id
 
@@ -101,39 +104,44 @@ are *exactly* eight (8) digits in length.
 
 Example:
    
-  curl http://{server}/vccl/11111111
+    curl http://{server}/vccl/11111111
 
 Success Response (200):
 
-  {
-    "status": "success",
-    "id": 11111111,
-    "card_state": "valid"
-  }
+```json
+{
+  "status": "success",
+  "id": 11111111,
+  "card_state": "valid"
+}
+```
 
 Example:
   
-  curl http://{server}/vccl/19746822
+    curl http://{server}/vccl/19746822
 
 Success Response (200):
 
-  {
-    "status": "success",
-    "id": 19746822,
-    "card_state": "canceled"
-  }
+```json
+{
+  "status": "success",
+  "id": 19746822,
+  "card_state": "canceled"
+}
+```
 
 Example:
 
-  curl http://{server}/vccl/1234
+    curl http://{server}/vccl/1234
 
 Error Response (200):
 
-  {
-    "status": "error",
-    "msg": "Provided ID is of invalid length"
-  }
-
+```json
+{
+  "status": "error",
+  "msg": "Provided ID is of invalid length"
+}
+```
 
 ## Evaluation Criteria:
 
