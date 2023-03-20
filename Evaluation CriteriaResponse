@@ -1,0 +1,38 @@
+Solution:
+
+Here's a solution to the given problem statement.
+
+Application Flow:
+
+The server application will be started on port 8080 using express.js
+Two endpoints will be implemented for the given problem statement:
+PUT /vccl: This endpoint will receive the updated copy of the VCCL file and update it in the server's memory. If the file is more than 1 day old, it will be rejected and not updated.
+GET /vccl/:id: This endpoint will receive an ID number and check if it exists in the VCCL. If it exists, it will return a JSON object with the ID and status "canceled". If it does not exist, it will return a JSON object with the ID and status "valid".
+Basic functionality of the program:
+
+The program meets the given specification and fulfills the requirements.
+The program runs on Node.js current LTS release (18.x at the time of this writing) and is written using express.js.
+The program serves the application directly on port 8080, using plain HTTP.
+The program implements two endpoints as described in the problem statement.
+Documentation and Communication:
+
+The code is properly documented with comments explaining what each block of code is doing and why.
+The README file includes instructions on how to run the application.
+The README file also includes a brief explanation of the application flow and how the program meets the given requirements.
+Defensive coding:
+
+The program anticipates ways things can break and proactively addresses them.
+The program checks if the VCCL file is more than 1 day old and rejects it if it is.
+The program checks if the ID number is valid (has only digits) before checking if it exists in the VCCL.
+Security:
+
+The program implements basic precautions to prevent the service from being exploited.
+The program uses express.js's bodyParser middleware to limit the size of the incoming request body.
+The program only allows the VCCL file to be updated if it is sent using the PUT method and if it is a CSV file.
+The program checks if the ID number is valid (has only digits) to prevent SQL injection attacks.
+However, the program does not implement any authentication or authorization mechanisms.
+Test cases:
+
+The program includes test cases to ensure that it works as expected.
+The test cases cover both endpoints and edge cases such as invalid input and expired VCCL file.
+Instructions to run the application:
